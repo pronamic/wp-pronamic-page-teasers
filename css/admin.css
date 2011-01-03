@@ -1,0 +1,53 @@
+#pronamic-page-teasers ol { 
+	font-size: 11px;
+
+	list-style-type: none;
+
+	margin: 0;
+	padding: 0;
+}
+
+#pronamic-page-teasers li { 
+	background: #FFF;
+
+	border: 1px solid #EEE;
+
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
+	padding: 4px;
+
+	position: relative;
+}
+
+#pronamic-page-teasers li span { 
+	
+}
+
+#pronamic-page-teasers li .deletion {
+	position: absolute;
+
+	right: 5px;
+
+	cursor: pointer;
+
+	display: none;	
+}
+
+#pronamic-page-teasers li:hover .deletion {
+	display: inline;	
+}
+
+#pronamic-page-teasers .ui-sortable li input {
+	display: none;
+}
+
+#pronamic-page-teasers .ui-sortable li {
+	background: #FFF url("sortable.gif") no-repeat 8px 8px;
+
+	cursor: move;
+
+	padding-left: 20px;
+}
