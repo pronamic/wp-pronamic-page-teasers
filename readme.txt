@@ -18,10 +18,12 @@ teasers of pages on a page. Editors can easily define the page teasers on the pa
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your 
 WordPress installation and then activate the Plugin from Plugins page.
 
-The teasers will automatically be added to the_content using the_content filter. If you want 
-to change the markup of the teasers, you should create a "pronamic-pages-teasers.php" file 
-within your theme directory. 
-	
+The teasers will automatically be added to [the_content()](http://codex.wordpress.org/Function_Reference/the_content) 
+using [the_content() filter](http://codex.wordpress.org/Plugin_API/Filter_Reference/the_content). If you want 
+to change the markup of the teasers, you should create a "pronamic-page-teasers.php" file  within your theme directory. 
+
+**pronamic-page-teasers.php**
+
 	<?php 
 	
 	$teasers = pronamic_get_page_teasers();
@@ -56,7 +58,7 @@ within your theme directory.
 
 **is_pronamic_page_teasers()**
 
-Return true if the loop is rendering Pronamic page teasers.
+Returns true if the loop is rendering Pronamic page teasers.
 
 
 **pronamic_page_teasers_the_content()**
