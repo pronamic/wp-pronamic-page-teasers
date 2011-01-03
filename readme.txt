@@ -9,7 +9,7 @@ This plugin makes it easy to bind pages (teasers) to a page.
 
 == Description ==
 
-With this plugin a user can easily bind pages to a pages. This way a developer can easily show 
+With this plugin a user can easily bind pages to a page. This way a developer can easily show 
 teasers of pages on a page. Editors can easily define the page teasers on the page editor screen.  
 
 
