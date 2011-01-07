@@ -96,6 +96,12 @@ filter. You can then manually add the function pronamic_page_teasers() to one of
 
 == Changelog ==
 
+= 1.1 =
+*	Fixed problem not applying shortcodes within the_content() afters teasers are added (reported by 
+	[Jelke Boonstra](http://jelkeboonstra.nl/)). This was a strange unexplainable problem, solved by 
+	giving [the_content() filter](http://codex.wordpress.org/Plugin_API/Filter_Reference/the_content)
+	a default priority of 20.
+
 = 1.0 =
 *	Initial release
 
