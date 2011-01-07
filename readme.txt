@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, page, pages, pages on page, teasers on page, teasers, teaser, related pages
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: 1.0
+Stable tag: 1.1
 
 This plugin makes it easy to bind pages (teasers) to a page.
 
