@@ -3,7 +3,7 @@
 Plugin Name: Pronamic Page Teasers
 Plugin URI: http://pronamic.eu/wordpress/page-teasers/
 Description: This plugin makes it simple to bind pages (teasers) to a page
-Version: 1.0
+Version: 1.1
 Requires at least: 3.0
 Author: Pronamic
 Author URI: http://pronamic.eu/
@@ -41,6 +41,13 @@ class PronamicPageTeasers {
 	 */
 	const SORT_COLUMN_TEASERS_ORDER = 'pronamic_teasers_order';
 
+	/**
+	 * The default 'the_content' priority
+	 * 
+	 * @var int
+	 */
+	const FILTER_THE_CONTENT_PRIORITY = 20;
+
 	////////////////////////////////////////////////////////////
 
 	/**
@@ -62,7 +69,7 @@ class PronamicPageTeasers {
 
 		add_action('admin_init', array(__CLASS__, 'adminInitialize'));
 
-		add_filter('the_content', 'pronamic_page_teasers_the_content');
+		add_filter('the_content', 'pronamic_page_teasers_the_content', self::FILTER_THE_CONTENT_PRIORITY);
 	}
 
 	////////////////////////////////////////////////////////////
@@ -237,7 +244,7 @@ class PronamicPageTeasers {
 		// prefend recursion
 		$autoAdd = has_filter('the_content', 'pronamic_page_teasers_the_content');
 		if($autoAdd) {
-			remove_filter('the_content', 'pronamic_page_teasers_the_content');
+			remove_filter('the_content', 'pronamic_page_teasers_the_content', self::FILTER_THE_CONTENT_PRIORITY);
 		}
 
 		self::$isTeasersRender = true; 
@@ -273,7 +280,7 @@ class PronamicPageTeasers {
 		// If teasers are auto added to the_content remove the filter to 
 		// prefend recursion
 		if($autoAdd) {
-			add_filter('the_content', 'pronamic_page_teasers_the_content');
+			add_filter('the_content', 'pronamic_page_teasers_the_content', self::FILTER_THE_CONTENT_PRIORITY);
 		}
 
 		self::$isTeasersRender = false;
