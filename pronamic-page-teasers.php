@@ -3,7 +3,7 @@
 Plugin Name: Pronamic Page Teasers
 Plugin URI: http://pronamic.eu/wordpress/page-teasers/
 Description: This plugin makes it simple to bind pages (teasers) to a page
-Version: 1.1
+Version: 1.2
 Requires at least: 3.0
 Author: Pronamic
 Author URI: http://pronamic.eu/
@@ -33,13 +33,6 @@ class PronamicPageTeasers {
 	 * @var string
 	 */
 	const META_KEY_TEASERS = '_pronamic_page_teasers';
-
-	/**
-	 * Meta key for the teasers
-	 * 
-	 * @var string
-	 */
-	const SORT_COLUMN_TEASERS_ORDER = 'pronamic_teasers_order';
 
 	/**
 	 * The default 'the_content' priority
@@ -181,28 +174,25 @@ class PronamicPageTeasers {
 	 * @param mixed $args
 	 * @return array
 	 */
-	public static function getTeasers($args = '') {
+	public static function getTeasers() {
 		$teasers = array();
 
-		global $post, $wpdb;
+		global $wpdb;
 
-		$ids = get_post_meta($post->ID, self::META_KEY_TEASERS, true);
+		$ids = get_post_meta(get_the_ID(), self::META_KEY_TEASERS, true);
 
 		if(!empty($ids)) {
-			$include = implode(', ', $ids);
-	
-			$defaults = array(
-				'include' => $ids , 
-				'sort_column' => self::SORT_COLUMN_TEASERS_ORDER 
-			);
-	
-			$args = wp_parse_args($args, $defaults);
-	
-			if($args['sort_column'] == self::SORT_COLUMN_TEASERS_ORDER) {
-				$args['sort_column'] = 'FIELD(' . $wpdb->posts . '.ID, ' . $include . ')';
+			$pages = get_pages(array(
+				'include' => implode(', ', $ids) 
+			));
+
+			foreach($pages as $page) {
+				$key = array_search($page->ID, $ids);
+				
+				$teasers[$key] = $page;
 			}
-	
-			$teasers = get_pages($args);
+			
+			ksort($teasers);
 		}
 
 		return $teasers;
