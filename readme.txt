@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, page, pages, pages on page, teasers on page, teasers, teaser, related pages
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: 1.1
+Stable tag: 1.2
 
 This plugin makes it easy to bind pages (teasers) to a page.
 
@@ -95,6 +95,9 @@ filter. You can then manually add the function pronamic_page_teasers() to one of
 
 
 == Changelog ==
+
+= 1.2 =
+*	Solved issue with the order of the page teasers, since WordPress 3.2+ the sort_column is restricted
 
 = 1.1 =
 *	Fixed problem not applying shortcodes within the_content() afters teasers are added (reported by 
