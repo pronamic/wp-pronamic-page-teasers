@@ -1,6 +1,7 @@
 === Pronamic Page Teasers ===
 Contributors: pronamic, remcotolsma 
 Tags: pronamic, page, pages, pages on page, teasers on page, teasers, teaser, related pages
+Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-page-teasers&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 3.0
 Stable tag: 1.2
