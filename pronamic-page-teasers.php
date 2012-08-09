@@ -3,10 +3,16 @@
 Plugin Name: Pronamic Page Teasers
 Plugin URI: http://pronamic.eu/wordpress/page-teasers/
 Description: This plugin makes it simple to bind pages (teasers) to a page
+
 Version: 1.2
 Requires at least: 3.0
+
 Author: Pronamic
 Author URI: http://pronamic.eu/
+
+Text Domain: pronamic-page-teasers
+Domain Path: /languages/
+
 License: GPL
 */
 
