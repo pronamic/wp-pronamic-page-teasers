@@ -40,13 +40,6 @@ class PronamicPageTeasers {
 	 */
 	const META_KEY_TEASERS = '_pronamic_page_teasers';
 
-	/**
-	 * The default 'the_content' priority
-	 * 
-	 * @var int
-	 */
-	const FILTER_THE_CONTENT_PRIORITY = 20;
-
 	////////////////////////////////////////////////////////////
 
 	/**
@@ -68,7 +61,7 @@ class PronamicPageTeasers {
 
 		add_action('admin_init', array(__CLASS__, 'adminInitialize'));
 
-		add_filter('the_content', 'pronamic_page_teasers_the_content', self::FILTER_THE_CONTENT_PRIORITY);
+		add_filter( 'the_content', 'pronamic_page_teasers_the_content' );
 	}
 
 	////////////////////////////////////////////////////////////
