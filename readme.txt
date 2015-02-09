@@ -1,14 +1,18 @@
 === Pronamic Page Teasers ===
 Contributors: pronamic, remcotolsma 
-Tags: pronamic, page, pages, pages on page, teasers on page, teasers, teaser, related pages
+Tags: pronamic, page, pages, pages on page, teasers on page, teasers, teaser, related pages, deprecated
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-page-teasers&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 
-This plugin makes it easy to bind pages (teasers) to a page.
+Deprecated — This plugin makes it easy to bind pages (teasers) to a page.
 
 == Description ==
+
+> This plugin is deprecated so Pronamic wil no longer support and maintain this plugin.
+>
+> If you want to help maintain the plugin, fork it on [GitHub](https://github.com/pronamic/wp-pronamic-page-teasers) and open pull requests.
 
 With this plugin a user can easily bind pages to a page. This way a developer can easily show 
 teasers of pages on a page. Editors can easily define the page teasers on the page editor screen.  
@@ -96,6 +100,9 @@ filter. You can then manually add the function pronamic_page_teasers() to one of
 
 
 == Changelog ==
+
+= 1.2.1 =
+*	Added an deprecated notice.
 
 = 1.2 =
 *	Solved issue with the order of the page teasers, since WordPress 3.2+ the sort_column is restricted
