@@ -40,6 +40,13 @@ class PronamicPageTeasers {
 	 */
 	const META_KEY_TEASERS = '_pronamic_page_teasers';
 
+	/**
+	 * The default 'the_content' priority
+	 * 
+	 * @var int
+	 */
+	const FILTER_THE_CONTENT_PRIORITY = 20;
+
 	////////////////////////////////////////////////////////////
 
 	/**
