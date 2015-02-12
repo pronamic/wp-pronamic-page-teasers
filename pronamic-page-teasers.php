@@ -4,7 +4,7 @@ Plugin Name: Pronamic Page Teasers
 Plugin URI: http://www.pronamic.eu/plugins/pronamic-page-teasers/
 Description: Deprecated — This plugin makes it simple to bind pages (teasers) to a page.
 
-Version: 1.2.1
+Version: 1.2.2
 Requires at least: 3.0
 
 Author: Pronamic
